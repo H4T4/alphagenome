@@ -30,7 +30,7 @@ _OUTPUT_PATH = flags.DEFINE_string(
 
 def main(_) -> None:
   logging.info('Reading GTF from %s', _GTF_PATH.value)
-  gtf = pyranges.read_gtf(_GTF_PATH.value, as_df=True)
+  gtf = pyranges.read_gtf(_GTF_PATH.value, as_df=True, duplicate_attr=True)
 
   gtf['gene_id_nopatch'] = gtf['gene_id'].str.split('.', expand=True)[0]
 
