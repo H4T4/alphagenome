@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0]
+
+### Added
+
+-   Add `filter_to_mane_select_transcript` to subset a GENCODE GTF to include
+    only entries corresponding to MANE select transcripts.
+-   Add `from_outputs` class method for creating `OutputMetadata` object from a
+    set of outputs.
+
+### Changed
+
+-   Update GTF processing script to include duplicate attributes and support
+    downloading source GTF from a URL.
+
 ## [0.3.0]
 
 ### Added
