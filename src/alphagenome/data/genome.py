@@ -126,10 +126,6 @@ class Interval:
   )
 
   def __post_init__(self):
-    if isinstance(self.start, (np.int32, np.int64)):
-      self.start = int(self.start)
-    if isinstance(self.end, (np.int32, np.int64)):
-      self.end = int(self.end)
     if self.end < self.start:
       raise ValueError('end < start. Interval: ' + str(self))
     if self.strand not in STRAND_OPTIONS:
